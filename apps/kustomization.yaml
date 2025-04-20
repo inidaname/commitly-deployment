@@ -1,4 +1,0 @@
-resources:
-  - ../ingress
-  - ../backend
-  - ../frontend
