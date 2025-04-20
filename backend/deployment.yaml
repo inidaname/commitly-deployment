@@ -15,5 +15,12 @@ spec:
       containers:
         - name: backend
           image: inidaname/api-commitly-node:0.0.1
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           ports:
             - containerPort: 3011
