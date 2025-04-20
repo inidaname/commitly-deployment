@@ -17,12 +17,5 @@ spec:
       containers:
         - name: frontend
           image: inidaname/commitly-web:latest
-          resources:
-            requests:
-              memory: "64Mi"
-              cpu: "250m"
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
           ports:
             - containerPort: 3000
