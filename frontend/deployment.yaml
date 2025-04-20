@@ -16,4 +16,4 @@ spec:
         - name: frontend
           image: inidaname/commitly-web:0.0.1
           ports:
-            - containerPort: 3011
+            - containerPort: 3000
