@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: inidaname/api-commitly-node:latest
+          image: inidaname/api-commitly-node:0.0.1
           ports:
             - containerPort: 3011
