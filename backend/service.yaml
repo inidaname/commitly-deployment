@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3011
+      targetPort: 3011
+      protocol: TCP
+  selector:
+    app: backend

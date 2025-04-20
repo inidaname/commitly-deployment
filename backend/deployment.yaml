@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: inidaname/api-commitly-node:latest
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3011
+          # env:
+          #   - name: DATABASE_URL
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: db-secret
+          #         key: database_url
+          #   - name: SECRET_KEY
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: secret-key-secret
+          #         key: secret_key
+          #   - name: ALLOWED_HOSTS
+          #     value: "your-allowed-hosts"
