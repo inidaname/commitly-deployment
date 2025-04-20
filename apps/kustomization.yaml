@@ -2,3 +2,4 @@ resources:
   - ../backend
   - ../frontend
   - ../ingress
+  - namespace.yaml
