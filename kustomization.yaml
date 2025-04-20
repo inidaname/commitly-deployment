@@ -1,4 +1,4 @@
 resources:
-  - backend
-  - frontend
-  - ingress
+  - backend/kustomization.yaml
+  - frontend/kustomization.yaml
+  - ingress/kustomization.yaml
